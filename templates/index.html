@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Boggle</title>
+    <link rel="stylesheet" href="/static/app.css">
+  </head>
+  <body>
+    <h1>Boogie!</h1>
+
+    <p>
+      Highest Score: <b>{{maxScore}}</b>
+    </p>
+    <p>
+      Current Score: <b id="score">0</b>
+    </p>
+    <p>
+      Game Count :  <b>{{playsCount}}</b>
+    </p>
+
+    <p>
+      Time Left!: <b id="timer">60</b>
+    </p>
+
+    <table class="board">
+        {% for row in board %}
+        <tr>
+            {% for cell in row %}
+            <td>{{cell}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+
+    <form id="WordForm" method="POST">
+        <input id="wordInput">
+        <button>Enter</button>
+    </form>
+
+    <p id="Message">
+    </p>
+
+    <ul id="foundWords">
+
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

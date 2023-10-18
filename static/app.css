@@ -1,0 +1,15 @@
+
+  .board td { 
+    padding: 5px 5px 5px 5px; 
+    border: 1px solid;
+}
+
+.found {
+    color: white;
+    background-color: darkolivegreen;
+  }
+  
+.notFound {
+    color: white;
+    background-color: darkred;
+  }
